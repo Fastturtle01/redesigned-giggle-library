@@ -12,7 +12,8 @@ SRCS	= ft_atoi.c \
 		  ft_isprint.c \
 		  ft_strdup.c \
 		  ft_strncmp.c \
-		  ft_strlcpy.c
+		  ft_strlcpy.c \
+		  ft_memset.c
 
 OBJS =	$(SRCS:.c=.o)
 RM =	rm -f
