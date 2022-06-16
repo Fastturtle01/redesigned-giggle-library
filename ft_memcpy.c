@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 21:05:31 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/16 22:05:19 by tmeelarp         ###   ########.fr       */
+/*   Created: 2022/06/16 23:52:16 by tmeelarp          #+#    #+#             */
+/*   Updated: 2022/06/17 00:33:17 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *dst, const void *restrict src, size_t n)
 {
-	unsigned char	*a;
+	char		*a;
+	const char	*z;
 
-	a = b;
-	while (len-- > 0)
-		*a++ = c;
-	return (b);
+	a = dst;
+	z = src;
+	if (!dst && !src)
+		return (dst);
+	while (n)
+	{
+		*a++ = *z++;
+		n--;
+	}
+	return (dst);
 }
