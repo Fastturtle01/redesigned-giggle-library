@@ -6,23 +6,13 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 00:14:58 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/07 16:13:33 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/16 13:22:10 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <string.h>
 #include "libft.h"
-
-// size_t	ft_strlen_1(char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 		i++;
-// 	return (i);
-// }
 
 size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
