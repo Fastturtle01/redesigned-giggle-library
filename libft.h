@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:28:04 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/17 12:10:32 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/17 14:21:04 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
+
+//compile .h with .c files by : gcc -Wall -Werror -Wextra -o strn ft_strnstr.c -L . -lft && ./strn
