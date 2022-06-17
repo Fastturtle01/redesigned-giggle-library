@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/17 00:33:57 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/17 10:18:09 by tmeelarp         ###   ########.fr       */
+/*   Created: 2022/06/17 11:49:15 by tmeelarp          #+#    #+#             */
+/*   Updated: 2022/06/17 11:59:42 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char		*a;
-	const char	*z;
+	int	i;
+	int	j;
 
-	a = dst;
-	z = src;
-	if (!dst && !src)
-		return (dst);
-	while (len--)
-		*a++ = *z++;
-	return (dst);
+	i = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] && len--)
+	{
+		j = 0;
+		while (haystack[i] && needle[j] && haystack[i] == needle[j])
+		{
+			i++;
+			j++;
+		}
+		if (needle[j] == '\0')
+			return ((char *)&haystack[i - j]);
+		i = (i - j) + 1;
+	}
+	return (0);
 }

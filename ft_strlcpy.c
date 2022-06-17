@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 00:14:58 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/16 16:44:30 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/17 12:02:33 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 // #include <string.h>
 #include "libft.h"
 
-size_t	lenth1(const char *s)
-{
-	size_t	i;
+// size_t	lenth1(const char *s)
+// {
+// 	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+// 	i = 0;
+// 	while (s[i])
+// 		i++;
+// 	return (i);
+// }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -30,14 +30,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	if (size == 0)
-		return (lenth1(src));
+		return (ft_strlen(src));
 	while (src[i] != '\0' && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (lenth1(src));
+	return (ft_strlen(src));
 }
 
 // int	main(void)

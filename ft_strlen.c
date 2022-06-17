@@ -6,13 +6,13 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:43:15 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/16 16:34:47 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/17 12:07:46 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t ft_strlen(const char * s)
 {
 	size_t	i;
 
