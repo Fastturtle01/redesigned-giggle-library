@@ -1,7 +1,7 @@
 CC =	gcc
 CFLAG =	-Wall -Wextra -Werror
 NAME =	libft.a
-SRCS	= ft_atoi.c \
+SRCS =	ft_atoi.c \
 		  ft_isalpha.c \
 		  ft_isascii.c \
 		  ft_strlen.c \
@@ -19,7 +19,8 @@ SRCS	= ft_atoi.c \
 		  ft_memcpy.c \
 		  ft_memmove.c \
 		  ft_strlcat.c \
-		  ft_strnstr.c
+		  ft_strnstr.c \
+		  ft_memmove.c
 
 OBJS =	$(SRCS:.c=.o)
 RM =	rm -f

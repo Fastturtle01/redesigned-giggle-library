@@ -6,11 +6,11 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:43:58 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/07 11:13:45 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/21 08:58:54 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	spacescheck(char *str)
+int	spacescheck(const char *str)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ int	spacescheck(char *str)
 	return (i);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	negative;
