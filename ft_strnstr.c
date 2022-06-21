@@ -42,10 +42,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	a;
 	int		z;
 
-	a = 0;
 	z = 0;
 	if (needle[0] == '\0')
 		return ((char *)haystack);
@@ -63,7 +61,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -81,4 +79,4 @@ int	main(void)
 	printf("New : %s\n", ft_strnstr(hay1, need1, -1));
 	printf("New : %s\n", ft_strnstr(hay1, "", -1));
 	printf("New : %s\n", ft_strnstr(hay1, "c", -1));
-}
+}*/
