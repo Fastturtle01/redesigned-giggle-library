@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:49:15 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/22 05:17:42 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/22 09:41:39 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // int	main(void)
 // {
 // 	 char hay[30] = "aaabcabcd";
+// 	 char *c = ft_strnstr(hay, "abcd", 9);
 // 	// char *need = "aabc";
 // 	// char hay1[30]= "lorem ism dolor sit";
 // 	// char need[10] = "abcd";
@@ -56,6 +57,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // 	// printf("OG : %s\n", strnstr(hay, need, -1));
 // 	// printf("OG : %s\n", strnstr(hay, "c", -1));
 // 	//char *b = ft_strnstr(hay1, "2", -1);
+// 	if (*c == *(hay+5))
+// 		printf("Same result\n");
 // 	printf("New : %s\n", ft_strnstr(hay, "abcd", 9));
 // 	printf("OG : %s\n", hay + 5);
 // 	// printf("New : %s\n", ft_strnstr(hay1, need1, -1));
