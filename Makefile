@@ -20,7 +20,9 @@ SRCS =	ft_atoi.c \
 		  ft_memmove.c \
 		  ft_strlcat.c \
 		  ft_strnstr.c \
-		  ft_memmove.c
+		  ft_memmove.c \
+		  ft_bzero.c \
+		  ft_memchr.c
 
 OBJS =	$(SRCS:.c=.o)
 RM =	rm -f
