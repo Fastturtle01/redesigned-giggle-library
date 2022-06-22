@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:49:15 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/22 04:34:54 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/22 05:17:42 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,29 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int		z;
-	size_t	a;
+	char	*keep;
+	int		a;
 
 	z = 0;
 	a = 0;
+	keep = (char *)haystack;
 	if (needle[0] == '\0')
 		return ((char *)haystack);
 	else if (len == 0 || len < ft_strlen((char *)needle))
 		return (0);
 	if (len > ft_strlen((char *)haystack))
 		len = ft_strlen((char *)haystack);
-	*(char *)(haystack + len + 1) = '\0';
-	while (*haystack != '\0' && len != 0)
+	else if (len < ft_strlen((char *)haystack))
+		keep[len] = '\0';
+	while (*(haystack+a))
 	{
-		z = ft_strncmp((char *)haystack, (char *)needle, \
+		z = ft_strncmp((char *)(keep+a), (char *)needle, \
 		ft_strlen((char *) needle));
-		if (ft_strlen((char *)haystack) < ft_strlen((char *)needle))
+		if (ft_strlen((char *)keep+a) < ft_strlen((char *)needle))
 			return (0);
 		if (z == 0)
-			return ((char *)haystack);
-		haystack++;
-		len--;
+			return ((char *)haystack + a);
+		a++;
 	}
 	return (0);
 }
@@ -45,16 +47,17 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 // int	main(void)
 // {
-// 	// char *hay = "aaabcabcaacd";
+// 	 char hay[30] = "aaabcabcd";
 // 	// char *need = "aabc";
-// 	char hay1[30]= "lorem ipsum dolor sit";
-// 	// char need[10] = "aabc";
+// 	// char hay1[30]= "lorem ism dolor sit";
+// 	// char need[10] = "abcd";
 // 	//char *a = strnstr(hay, "2", -1);
 // 	// printf("OG : %s\n", strnstr(hay, "cd", 8));
 // 	// printf("OG : %s\n", strnstr(hay, need, -1));
 // 	// printf("OG : %s\n", strnstr(hay, "c", -1));
 // 	//char *b = ft_strnstr(hay1, "2", -1);
-// 	printf("New : %s\n", ft_strnstr(hay1, "dolor", 15));
+// 	printf("New : %s\n", ft_strnstr(hay, "abcd", 9));
+// 	printf("OG : %s\n", hay + 5);
 // 	// printf("New : %s\n", ft_strnstr(hay1, need1, -1));
 // 	// printf("New : %s\n", ft_strnstr(hay1, "c", -1));
 // }
