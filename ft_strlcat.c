@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:16:38 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/29 06:04:30 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/06/29 06:13:30 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t n = size;
 	size_t dlen;
 
+	d = dst;
+	s = src;
+	n = size;
 	while (n-- != 0 && *d != '\0')
 		d++;
 	dlen = d - dst;
