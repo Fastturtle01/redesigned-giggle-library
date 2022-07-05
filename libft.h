@@ -6,17 +6,14 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:28:04 by tmeelarp          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/07/02 07:36:07 by tmeelarp         ###   ########.fr       */
-=======
-/*   Updated: 2022/07/04 22:04:24 by tmeelarp         ###   ########.fr       */
->>>>>>> daa104537526749bbc0d22b1822d4342fea4cd90
+/*   Updated: 2022/07/05 18:10:57 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include  <unistd.h>
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
@@ -40,12 +37,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-<<<<<<< HEAD
 void	*ft_calloc(size_t nmemb, size_t size);
-=======
-char *ft_substr(char const *s, unsigned int start, size_t len);
-
->>>>>>> daa104537526749bbc0d22b1822d4342fea4cd90
+char	*ft_strjoin(char const *s1, char const *s2);
+char 	*ft_strtrim(char const *s1, char const *set);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 #endif
 
 //gcc -Wall -Werror -Wextra -o strn ft_strnstr.c -L . -lft && ./strn

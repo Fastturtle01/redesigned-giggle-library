@@ -25,11 +25,12 @@ SRCS =	ft_atoi.c \
 		  ft_memchr.c \
 		  ft_calloc.c \
 		  ft_memcmp.c \
-<<<<<<< HEAD
-		  ft_calloc.c
-=======
-		  ft_substr.c
->>>>>>> daa104537526749bbc0d22b1822d4342fea4cd90
+		  ft_calloc.c \
+		  ft_strjoin.c \
+		  ft_strtrim.c \
+		  ft_putchar_fd.c \
+		  ft_putstr_fd.c \
+		  ft_putendl_fd.c
 
 OBJS =	$(SRCS:.c=.o)
 RM =	rm -f

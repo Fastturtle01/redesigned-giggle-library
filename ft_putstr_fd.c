@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 08:43:53 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/05 15:10:56 by tmeelarp         ###   ########.fr       */
+/*   Created: 2022/07/05 18:04:18 by tmeelarp          #+#    #+#             */
+/*   Updated: 2022/07/05 18:07:07 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-// void	*ft_calloc(size_t nmemb, size_t size)
-// {
-// 	register PTR ptr;
-// 	if (nmemb == 0 || size == 0)
-// 	nmemb = size = 1;
+#include "libft.h"
 
-// 	ptr = malloc (nmemb * size);
-// 	if (ptr) bzero (ptr, nmemb * size);
-// 	return ptr;
-// }
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+}

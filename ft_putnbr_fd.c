@@ -1,23 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 08:43:53 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/05 15:10:56 by tmeelarp         ###   ########.fr       */
+/*   Created: 2022/07/05 18:16:37 by tmeelarp          #+#    #+#             */
+/*   Updated: 2022/07/05 18:17:04 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-// void	*ft_calloc(size_t nmemb, size_t size)
-// {
-// 	register PTR ptr;
-// 	if (nmemb == 0 || size == 0)
-// 	nmemb = size = 1;
+#include "libft.h"
 
-// 	ptr = malloc (nmemb * size);
-// 	if (ptr) bzero (ptr, nmemb * size);
-// 	return ptr;
-// }
+void	ft_putnbr

@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 08:43:53 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/05 15:10:56 by tmeelarp         ###   ########.fr       */
+/*   Created: 2022/07/05 18:17:37 by tmeelarp          #+#    #+#             */
+/*   Updated: 2022/07/05 18:26:36 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-// void	*ft_calloc(size_t nmemb, size_t size)
-// {
-// 	register PTR ptr;
-// 	if (nmemb == 0 || size == 0)
-// 	nmemb = size = 1;
+#include "libft.h"
 
-// 	ptr = malloc (nmemb * size);
-// 	if (ptr) bzero (ptr, nmemb * size);
-// 	return ptr;
-// }
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+
+}
