@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:16:38 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/29 06:13:30 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/04 21:27:52 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char *d = dst;
-	const char *s = src;
-	size_t n = size;
-	size_t dlen;
+	char		*d;
+	const char	*s;
+	size_t		n;
+	size_t		dlen;
 
 	d = dst;
 	s = src;
@@ -26,19 +26,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		d++;
 	dlen = d - dst;
 	n = size - dlen;
-
 	if (n == 0)
-		return(dlen + ft_strlen(s));
+		return (dlen + ft_strlen(s));
 	while (*s != '\0')
 	{
-		if (n != 1) {
+		if (n != 1)
+		{
 			*d++ = *s;
 			n--;
 		}
 		s++;
 	}
 	*d = '\0';
-	return(dlen + (s - src));
+	return (dlen + (s - src));
 }
 
 // #include <stdio.h>

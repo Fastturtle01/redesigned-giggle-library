@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/17 00:33:57 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/04 21:30:01 by tmeelarp         ###   ########.fr       */
+/*   Created: 2022/07/04 21:39:44 by tmeelarp          #+#    #+#             */
+/*   Updated: 2022/07/04 23:36:50 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*a;
-	const char	*z;
-	const char	*lastsrc;
-	char		*lastdst;
+	char	*a;
+	size_t	i;
 
-	a = dst;
-	z = src;
-	if (a < z)
+	i = 0;
+	if(!(a = (char *)malloc (sizeof(char) * len + 1)))
+		return	(NULL);
+	while (s[start] && i < len)
 	{
-		while (len--)
-			*a++ = *z++;
+		a[i] = s[start];
+		start++;
+		i++;
 	}
-	else
-	{
-		lastdst = a + (len - 1);
-		lastsrc = z + (len - 1);
-		while (len--)
-			*lastdst-- = *lastsrc--;
-	}
-	return (dst);
+	a[i] = '\0';
+	return (a);
 }
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	char	*a = "0123456789";
+// 	char	*b = ft_substr(a, 0, 4);
+// 	printf("result = %s\n", b);
+// }
