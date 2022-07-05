@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:28:04 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/29 06:07:10 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/02 07:36:07 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-
+void	*ft_calloc(size_t nmemb, size_t size);
 #endif
 
 //gcc -Wall -Werror -Wextra -o strn ft_strnstr.c -L . -lft && ./strn
-//memmove calloc strnstr
+//calloc strnstr
