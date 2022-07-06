@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 09:53:26 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/24 23:23:27 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/05 23:18:34 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	a = (const char *)s1;
 	b = (const char *)s2;
-	if (n == 0)
+	if (!s1 || !s2)
 		return (0);
-	while (n-- != 0 && (n < sizeof(a) || n < sizeof(b)))
+	while (i < n)
 	{
 		if (a[i] != b[i])
 			return ((unsigned char)a[i] - (unsigned char)b[i]);

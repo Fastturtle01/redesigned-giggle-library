@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 00:33:57 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/04 21:30:01 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/05 22:47:44 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	a = dst;
 	z = src;
+	if (!dst && !src)
+		return (NULL);
 	if (a < z)
 	{
 		while (len--)

@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:49:15 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/02 07:32:01 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/06 11:26:42 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	else if (len == 0 || len < ft_strlen((char *)needle))
 		return (0);
-	if (len > ft_strlen((char *)haystack))
-		len = ft_strlen((char *)haystack);
-	else if (len < ft_strlen((char *)haystack))
-		keep[len + 1] = '\0';
-	while (*(haystack + a))
+	while (*(haystack + a) && len >= 1)
 	{
-		z = ft_strncmp((char *)(keep + a), (char *)needle, \
+		z = ft_memcmp((char *)(keep + a), (char *)needle, \
 		ft_strlen((char *) needle));
 		if (ft_strlen((char *)keep + a) < ft_strlen((char *)needle))
 			return (0);
-		if (z == 0)
+		else if (z == 0)
 			return ((char *)haystack + a);
 		a++;
 	}
