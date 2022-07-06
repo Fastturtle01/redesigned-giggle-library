@@ -6,61 +6,50 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:41:12 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/06 13:53:11 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/06 17:20:11 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	trimstart(char *s1, char const *set)
+size_t	is_trim(char c, char const *set)
 {
-	int		i;
-	int		j;
+	size_t	i;
 
 	i = 0;
-	j = 0;
-	while (s1[i] == set[j])
+	while (i < ft_strlen(set))
 	{
-		j = 0;
-		while (s1[i] != set[j] && set[j])
-			j++;
+		if (c == set[i])
+			return (1);
 		i++;
 	}
-	return (i);
-}
-
-size_t	trimend(char *s1, char const *set)
-{
-	size_t	len;
-	int		i;
-	int		j;
-
-	len = ft_strlen(s1);
-	i = 0;
-	j = 0;
-	while (s1[len] == set[j])
-	{
-		j = 0;
-		while (s1[len] != set[j] && set[j])
-			j++;
-		len--;
-	}
-	return (len);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*ss;
 	size_t	start;
 	size_t	end;
+	size_t	i;
 	char	*book;
 
-	ss = (char *)s1;
-	start = trimstart(ss, set);
-	ss = ss + start;
-	end = trimend(ss, set);
-	ss[end] = '\0';
-	book = (char *)malloc(sizeof(char) * ft_strlen(ss) + 1);
-	book = ss;
+	if (!s1)
+		return (0);
+	start = 0;
+	while (is_trim(s1[start], set) && s1[start] != '\0')
+		start++;
+	end = ft_strlen(s1);
+	while (is_trim(s1[end - 1], set) && end > start)
+		end--;
+	book = (char *)malloc(sizeof(char) * end - start + 1);
+	if (!(book))
+		return (0);
+	i = 0;
+	while (start < end)
+	{
+		book[i] = s1[start++];
+		i++;
+	}
+	book[i] = '\0';
 	return (book);
 }

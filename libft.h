@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:28:04 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/05 23:05:29 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:59:50 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include  <unistd.h>
+# include <stdint.h>
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);

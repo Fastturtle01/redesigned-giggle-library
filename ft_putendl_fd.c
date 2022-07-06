@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 18:08:33 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/05 18:11:41 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/06 17:21:09 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
