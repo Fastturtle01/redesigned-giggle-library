@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:49:15 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/06 11:26:42 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/06 12:24:22 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,25 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		z;
-	char	*keep;
-	int		a;
+	size_t	i;
+	size_t	j;
 
-	z = 0;
-	a = 0;
-	keep = (char *)haystack;
-	if (needle[0] == '\0')
+	i = 0;
+	if (needle[i] == '\0')
 		return ((char *)haystack);
-	else if (len == 0 || len < ft_strlen((char *)needle))
-		return (0);
-	while (*(haystack + a) && len >= 1)
+	while (haystack[i] != '\0' && len > i)
 	{
-		z = ft_memcmp((char *)(keep + a), (char *)needle, \
-		ft_strlen((char *) needle));
-		if (ft_strlen((char *)keep + a) < ft_strlen((char *)needle))
-			return (0);
-		else if (z == 0)
-			return ((char *)haystack + a);
-		a++;
+		j = 0;
+		while ((i + j) < len && haystack[i + j] == needle[j] && needle[j])
+		{
+			j++;
+		}
+		if (needle[j] == '\0')
+			return ((char *)&(haystack[i]));
+		i++;
 	}
 	return (0);
 }
-
 // #include <stdio.h>
 // #include <string.h>
 
