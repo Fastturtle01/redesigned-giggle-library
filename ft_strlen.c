@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:43:15 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/17 12:14:18 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/06 14:11:01 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
+	if (! (s))
+		return (0);
 	while (s[i])
 		i++;
 	return (i);
