@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:58:16 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/06 12:37:51 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/06 21:38:21 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*a;
 
 	i = -1;
+	if (! (s1) || ! (s2))
+		return (0);
 	a = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!(a))
 		return (NULL);
