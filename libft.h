@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:28:04 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/06 21:53:02 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/07 10:14:25 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 # include  <unistd.h>
 # include <stdint.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+// next: The address of the next node, or NULL if the next node is the last one.
+// content: The data contained in the node.
+// void * allows to store any kind of data.
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_atoi(const char *str);
@@ -49,6 +57,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_itoa(int n);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list	**lst, t_list	*new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
 #endif
 
 //gcc -Wall -Werror -Wextra -o strn ft_strnstr.c -L . -lft && ./strn
