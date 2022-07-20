@@ -6,23 +6,11 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 00:14:58 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/05 00:03:07 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/19 21:15:45 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
 #include "libft.h"
-
-// size_t	lenth1(const char *s)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (s[i])
-// 		i++;
-// 	return (i);
-// }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
