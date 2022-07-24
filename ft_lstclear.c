@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:53:35 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/07 10:12:36 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:38:29 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst)
 	{
-		a  = (*lst) -> next;
+		a = (*lst)->next;
 		ft_lstdelone(*lst, del);
 		*lst = a;
 	}

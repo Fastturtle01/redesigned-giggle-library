@@ -49,7 +49,9 @@ BONUS =	ft_lstnew.c \
 		  ft_lstmap.c
 
 OBJS =	$(SRCS:.c=.o)
+
 BONUS_OBJS = $(BONUS:.c=.o)
+
 RM =	rm -f
 
 all: $(NAME)
@@ -61,7 +63,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)

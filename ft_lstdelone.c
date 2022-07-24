@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:37:38 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/07 09:56:57 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:39:07 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,4 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
 	free(lst);
-	}
+}
