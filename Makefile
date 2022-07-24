@@ -36,7 +36,9 @@ SRCS =	ft_atoi.c \
 		  ft_strmapi.c \
 		  ft_striteri.c \
 		  ft_itoa.c \
-		  ft_lstnew.c \
+		  ft_split.c
+
+BONUS =	ft_lstnew.c \
 		  ft_lstadd_front.c \
 		  ft_lstsize.c \
 		  ft_lstlast.c \
@@ -44,10 +46,10 @@ SRCS =	ft_atoi.c \
 		  ft_lstdelone.c \
 		  ft_lstclear.c \
 		  ft_lstiter.c \
-		  ft_lstmap.c \
-		  ft_split.c
+		  ft_lstmap.c
 
 OBJS =	$(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS:.c=.o)
 RM =	rm -f
 
 all: $(NAME)
