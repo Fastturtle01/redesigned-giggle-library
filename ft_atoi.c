@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:43:58 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/06/21 08:58:54 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/12/01 22:08:38 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ int	ft_atoi(const char *str)
 	return (a * negative);
 }
 
-// #include <stdlib.h>
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	int	a = atoi("+-54");
-// 	int	b = atoi("+48");
-// 	int	c = atoi("++54");
-// 	printf("%d\n", a);
-// 	printf("%d\n", b);
-// 	printf("%d\n", c);
-// }
+#include <stdlib.h>
+#include <stdio.h>
+int	main(void)
+{
+	// int	a = atoi("+-54");
+	// int	b = atoi("+48");
+	// int	c = atoi("++54");
+	// printf("%d\n", a);
+	// printf("%d\n", b);
+	// printf("%d\n", c);
+}

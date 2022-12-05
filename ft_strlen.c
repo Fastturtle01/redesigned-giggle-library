@@ -6,7 +6,7 @@
 /*   By: tmeelarp <tmeelarp@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 18:43:15 by tmeelarp          #+#    #+#             */
-/*   Updated: 2022/07/06 14:11:01 by tmeelarp         ###   ########.fr       */
+/*   Updated: 2022/12/02 01:05:03 by tmeelarp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-// #include <stdio.h>
-//
-// int	main(void)
-// {
-// 	int	a = ft_strlen("");
-// 	printf("%d\n", a);
-// }
+#include <stdio.h>
+
+int	main(void)
+{
+	int	a = ft_strlen("");
+	printf("%d\n", a);
+}
